@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="main-header">
@@ -15,11 +15,11 @@
           <li><a href="info.html">Информация</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="price.html">Прайс-лист</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="html/catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">Вход</li>
+          <a class="login-link" href="html/login.html">Вход</a>
         </ul>
       </nav>
     </header>
@@ -65,8 +65,8 @@
         <figure class="gallery-content">
           <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
         </figure>
-        <span class="button gallery-button gallery-button-back">Назад</span>
-        <span class="button gallery-button gallery-button-next">Вперед</span>
+        <button type="button" class="button gallery-button gallery-button-back">Назад</button>
+        <button type="button" class="gallery-button gallery-button-next">Вперед</button>
       </section>
       
        <section class="contacts">
@@ -74,36 +74,45 @@
         <p>
            Барбершоп «Бородинский»<br>
            Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-           Телефон: +7 (812) 666-02-66
+           Телефон: +7 (812) 666-02-66<br>
         </p>
         <p>
           Время работы:<br>
           пн—пт: с 10:00 до 22:00<br>
-          сб—вс: с 10:00 до 19:00
+          сб—вс: с 10:00 до 19:00<br>
         </p>
-        <a class="button" href="map.html">Как проехать</a>
+        <a class="button" href="html/map.html">Как проехать</a>
         <a class="button" href="contacts.html">Обратная связь</a>
       </section>
       
       <section class="appointment">
         <h2>Записаться</h2>
         <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <!-- Здесь будет форма -->
+        <form class="appointment-form" method="POST" active="https://echo.htmlacademy.ru">
+          <lable>Дата<br>
+            <input class="appointment-date" type="date" placeholder="81.10.2017" name="date" value=""></lable><br>
+          <lable>Время<br>
+            <input class="appointment-time" type="time" placeholder="10:00" name="time" value=""></lable><br>
+          <lable>Имя<br>
+            <input class="appointment-name" type="text" placeholder="Борода" name="name" value=""></lable><br>
+          <lable>Телефон<br>
+            <input class="appointment-phone" type="tel" placeholder="+1 234 567 8900" name="phone" value=""></lable><br>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
       <p class="footer-contacts">
         Барбершоп «Бородинский»<br>
         <addr>Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</addr><br>
-        <a href="map.html">Как нас найти?</a><br>
+        <a href="html/map.html">Как нас найти?</a><br>
         Телефон: +7 (812) 666-02-66
       </p>
       <div class="footer-social">
         <b>Давайте дружить!</b>
         <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="www.vk.com">Вконтакте</a></li>
+          <li><a class="social-button" href="www.fb.com">Фейсбук</a></li>
+          <li><a class="social-button" href="www.instagram.com">Инстаграм</a></li>
         </ul>
       </div>
       <p class="footer-copyright">
@@ -111,17 +120,5 @@
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>  
-    
-    <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
-    </section>
-    
-    <section class="modal modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
-    </section>
   </body>
 </html>
